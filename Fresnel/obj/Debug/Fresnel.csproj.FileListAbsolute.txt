@@ -1,0 +1,13 @@
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\bin\Debug\Fresnel.exe.config
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\bin\Debug\Fresnel.exe
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\bin\Debug\Fresnel.pdb
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.csprojResolveAssemblyReference.cache
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\MainWindow.baml
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\MainWindow.g.cs
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\App.g.cs
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel_MarkupCompile.cache
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.g.resources
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.Properties.Resources.resources
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.csproj.GenerateResource.Cache
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.exe
+D:\Gavrilin\2016\Fresnel\Fresnel\Fresnel\obj\Debug\Fresnel.pdb

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>alglib2.dll</id>
+    <version>3.10.2</version>
+    <title>Alglib2</title>
+    <authors>Sergey Bochkanov</authors>
+    <owners>Sergey Bochkanov</owners>
+    <licenseUrl>http://www.alglib.net/download.php</licenseUrl>
+    <projectUrl>http://www.alglib.net/</projectUrl>
+    <iconUrl>http://www.alglib.net/img/logo_3cubes_small.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ALGLIB is a cross-platform numerical analysis and data processing library. It supports several programming languages (C++, C#, Pascal, VBA) and several operating systems (Windows, Linux, Solaris). ALGLIB features include:
+
+Data analysis (classification/regression, including neural networks)
+Optimization and nonlinear solvers
+Interpolation and linear/nonlinear least-squares fitting
+Linear algebra (direct algorithms, EVD/SVD), direct and iterative linear solvers, Fast Fourier Transform and many other algorithms (numerical integration, ODEs, statistics, special functions)</description>
+    <summary>ALGLIB is a cross-platform numerical analysis and data processing library. It supports several programming languages (C++, C#, Pascal, VBA) and several operating systems (Windows, Linux, Solaris). ALGLIB features include:
+
+Data analysis (classification/regression, including neural networks)
+Optimization and nonlinear solvers
+Interpolation and linear/nonlinear least-squares fitting
+Linear algebra (direct algorithms, EVD/SVD), direct and iterative linear solvers, Fast Fourier Transform and many other algorithms (numerical integration, ODEs, statistics, special functions)</summary>
+    <releaseNotes>CSV import - you can now read 2D matrix from CSV file
+AGS (Adaptive Gradient Sampling) algorithm for nonsmooth nonconvex constrained optimization, which makes ALGLIB one of the few commercial packages supporting nonsmooth optimization.
+Ward's method for hierarchical clustering
+special lightweight linear solvers without condition number estimation and iterative refinement - orders of magnitude faster than their "feature-rich" counterparts
+parallel k-means clustering (parallelism is supported only in commercial edition of ALGLIB)</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <language>C#</language>
+    <tags>Statistics Optimization Machine-learning Interpolation</tags>
+  </metadata>
+</package>

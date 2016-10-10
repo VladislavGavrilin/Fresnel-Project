@@ -1,0 +1,119 @@
+﻿<Window x:Class="Fresnel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        Width="Auto" Height="Auto" SizeToContent="WidthAndHeight"
+       >
+    <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="420"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Height="20" Grid.ColumnSpan="2">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Новый Проект"></MenuItem>
+                <MenuItem Header="Открыть Проект"></MenuItem>
+                <MenuItem Header="Сохранить"></MenuItem>
+                <MenuItem Header="Сохранить Как..."></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Exit"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TabControl Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <TabItem x:Name="Inititials" Height="20">
+                <TabItem.Header>
+                    <TextBlock>Подготовка</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid x:Name="Init" Height="400">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140"></RowDefinition>
+                            <RowDefinition Height="200"></RowDefinition>
+                            <RowDefinition Height="80"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="Входные параметры" Height="140" Grid.Row="0" Background="BlanchedAlmond">
+                            <Grid x:Name="initParams" Height="120" VerticalAlignment="Top">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="360"></ColumnDefinition>
+                                    <ColumnDefinition Width="360"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Width="230">Частота измерений, ГГц</TextBlock>
+                                    <TextBox Name="customFreq" Width="70" Margin="0 0 0 0" Height="20"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Width="230">Сектор ДН, градусы</TextBlock>
+                                    <TextBox Name="customRpArea" Width="70" Margin="0 0 0 0" Height="20"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+                                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Width="230">Вертикальный размер апертуры, мм</TextBlock>
+                                    <TextBox Name="customHeight" Width="70" Margin="0 0 0 0" Height="20"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Width="230">Горизонтальный размер апертуры, мм</TextBlock>
+                                    <TextBox Name="customWidth" Width="70" Margin="0 0 0 0" Height="20"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Width="230">Дистанция измерений, м</TextBlock>
+                                    <TextBox Name="customDist" Width="70" Margin="0 0 0 0" Height="20"></TextBox>
+                                </StackPanel>
+                                <Button Grid.Row="2" Grid.Column="1" Height="20" Width="150" Click="applyInitials">Применить</Button>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Выходные параметры" Height="200" Grid.Row="1" Background="BlanchedAlmond">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="360"></ColumnDefinition>
+                                    <ColumnDefinition Width="180"></ColumnDefinition>
+                                    <ColumnDefinition Width="180"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Рассчетные</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Ввод вручную</TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Шаг измерений по углу места, градусы</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Количество измерений</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Сектор измерений, градусы</TextBlock>
+
+                                <TextBlock Name="stepResult" Width="70" Grid.Row="1" Grid.Column="1" Height="20" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                                <TextBox Name="stepCustom" Width="70" Grid.Row="1" Grid.Column="2" Height="20"></TextBox>
+                                <TextBlock Name="cutResult" Width="70" Grid.Row="2" Grid.Column="1" Height="20"></TextBlock>
+                                <TextBlock Name="cutCustomResult" Width="70" Grid.Row="2" Grid.Column="2" Height="20"></TextBlock>
+                                <TextBlock Name="calcAreaResult" Width="70" Grid.Row="3" Grid.Column="1" Height="20"></TextBlock>
+                                <Button  Grid.Row="3" Grid.Column="2" Height="20" Width="100">Проверить</Button>
+
+                            </Grid>
+                        </GroupBox>
+                        <Button Grid.Row="2" Height="20">Перейти к восстановлению с переносом значений</Button>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="obrDn" Height="20">
+                <TabItem.Header>
+                    <TextBlock>OBR DN</TextBlock>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="restore" Height="20">
+                <TabItem.Header>
+                    <TextBlock>Восстановление</TextBlock>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="result" Height="20">
+                <TabItem.Header>
+                    <TextBlock>Результат</TextBlock>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
